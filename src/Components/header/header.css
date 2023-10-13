@@ -1,0 +1,115 @@
+header{
+    height: 100vh;
+    padding-top: 3rem;
+    overflow: hidden;
+}
+
+.header__container{
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+/*==========CTA============*/
+.cta{
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+/*==========HEADERSOCIALS===========*/
+.header__socials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+}
+.header__socials::after{
+    content: '';
+    width: 1px;
+    height: 2rem;
+    background-color: var(--color-primary) ;
+}
+/*==========ME==========*/
+.me{
+    background-image: url(../../assets/img1.jpg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 10px rgba(12, 12, 12, 0.422);
+    width: 250px;
+    height: 400px;
+    padding-top: 150px;
+    margin:auto;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    justify-self: center;
+    order: 1;
+    animation: profile__animate 4s ease-in-out infinite 0.2s;
+
+}
+/*=========SCROLLDOWN==========*/
+.scroll__down{
+    position: absolute;
+    right: -2.3rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 200;
+    font-size: 0.9rem;
+}
+.scroll__down i{
+    width: 2rem;
+}
+
+
+@keyframes profile__animate {
+    0%{
+        border-radius : 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    100%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}
+/*===========MEDIAQUERIES(MEDIUM DEVICES)==============*/
+@media screen and (max-width:1254px){
+    header{
+        height: 100vh;
+    }
+   
+}
+
+/*===========MEDIAQUERIES(SMALL DEVICES)==============*/
+@media screen and (max-width:600px){
+    header{
+        height: 90vh;
+    }
+    .header__socials,.scroll__down{
+        display: none;
+    }
+    h1{
+        font-size: 2.5rem;
+    }
+    .cta{
+        display: flex;
+        gap: -5rem;
+    }
+    .cta a {
+        margin: 0;
+    }
+    .me{
+        background-image: url(../../assets/img1.jpg);
+        width: 200px;
+        height: 300px;
+        padding-top: 150px;
+        margin:auto;
+        margin-top: 50px;
+ 
+    
+    }
+}

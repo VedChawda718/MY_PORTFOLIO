@@ -1,0 +1,167 @@
+.about__container{
+    display: grid;
+    grid-template-columns: 35% 50%;
+    gap: 15%;
+}
+
+.about__me{
+    width: 27rem;
+    height: 27rem;
+    border-radius: 2rem;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        var(--color-primary),
+        transparent
+    );
+}
+
+
+.about__me-image{
+
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(10deg);   
+    transition: var(--transition);  
+    justify-self: center; 
+    width: 27rem;
+    height: 27rem;
+}
+.about__me-image:hover{
+    transform: rotate(0);
+}
+
+.about__cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.about__card{
+    display: flex;
+    flex-direction: column;
+    background: var(--color-bg-variant);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: center;  
+    padding: 50px 0;  
+    font-size: 2rem;
+}
+.about__card i{
+    color: var(--color-primary);
+}
+
+.about__card:hover{
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+}
+
+.about__icon{
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.about__card h5{
+    font-size: 0.85rem;
+    margin-top: 2rem;
+}
+
+
+.about__content p{
+    padding: 0.3rem;
+    margin: 2rem 0 2.6rem;
+    color: var(--color-light);
+   
+}
+.about__card a{
+    font-size: 1.5rem;
+    color: var(--color-light);
+    margin: auto;
+}
+
+/*================= MEDIA QUERIES (MEDIUM DEVICES) ========================== */
+
+@media screen and (max-width:1253px) {
+    .about__container{
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      .about__me{
+        width: 25rem;
+        height: 17rem;
+        margin: auto;
+        margin-bottom: 2rem;
+        
+      }
+      .about__me-image{
+          height:17rem;
+          width: 25rem;
+          margin: auto;
+      }
+      .about__content p {
+        margin: 1rem 0 0.5rem;
+      }
+}
+
+/*================= MEDIA QUERIES (SMALL DEVICES) ========================== */
+
+@media screen and (max-width:600px) {
+
+  
+    section #about{
+        margin-top: 8rem;
+        height: 0vh;  
+    }
+
+    
+    .about__container{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .about__me{
+        width: 200px;
+        height: 200px;
+    }
+   
+    .about__me-image{
+        height: 200px;
+        width: 200px;
+    }
+    .about__card{
+        margin: 1rem 0 1rem 0;
+        height: 150px;
+        padding: 0rem;
+        padding-top: 2rem;
+        font-size: 1.5rem;
+    }
+    .about__card a{
+        margin-top: 0rem;
+    }
+    .about__card h5{
+       font-size: 0.5rem;
+    }
+    .about__card i{
+        font-size: 2rem;
+    }
+    .btn-primary{
+        margin-left: 2rem;
+        font-size: 0.8rem;
+    }
+    section > h2{
+        margin: auto; 
+        margin-bottom: 1.5rem;
+    }
+    .about__content p{
+        font-size: 12px;
+        padding: 1.5rem;
+        margin: 0 0 0 0;
+    }
+  
+
+     
+    
+}

@@ -1,0 +1,121 @@
+footer{
+    background-color: var(--color-primary);
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 2rem;  
+}
+
+footer a{
+    color: var(--color-bg);
+}
+
+.footer__logo{
+    font-size: 2em;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    display: inline-block;
+
+}
+
+.permalinks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10rem;
+    font-size: 1rem;
+    margin: 0 auto 2rem;
+   
+}
+.footer__socials{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+.footer__socials a{
+    background: var(--color-bg) ;
+    color: var(--color-white);
+    padding: 0.8rem;
+    border-radius: 0.7rem;
+    display: flex;
+    border: 1px solid transparent;
+}
+
+.footer__socials a:hover{
+    background: transparent;
+    color: var(--color-bg);
+    border-color: var(--color-bg);
+}
+
+.footer__copyright{
+   font-size: larger;
+    color: var(--color-bg);
+
+}
+
+/*================= MEDIA QUERIES (MEDIUM DEVICES) ========================== */
+
+@media screen and (max-width:1253px) {
+    footer{
+        margin-top: 20rem;
+    }
+    .footer__logo{
+        font-size: 2.5rem;
+        font-weight: 410;
+        margin-bottom: 1rem;
+    }
+    .permalinks{
+        gap: 2rem;
+        font-size: 1rem;
+        margin: 0 auto 1.5rem;
+       
+    }
+    .footer__socials{
+        gap: 3rem;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        transition: var(--transition);
+    }
+  
+    .footer__copyright{
+        margin-bottom: 0.5rem;
+
+    }
+    
+}
+
+/*================= MEDIA QUERIES (SMALL DEVICES) ========================== */
+
+@media screen and (max-width:600px) {
+    footer{
+        margin-top: 20rem;
+        border-radius: 0.5rem 0.5rem 0 0; 
+    }
+    .footer__logo{
+        font-size: 2rem;
+        font-weight: 410;
+        margin-bottom: 1rem;
+    }
+    .permalinks{
+        gap: 1.5rem;
+        font-size: 0.8rem;
+        margin: 0 auto 1.5rem;
+        flex-direction: column;
+        transition: var(--transition);   
+    }
+    .footer__socials{
+        gap: 2rem;
+        margin-bottom: 0.2rem;
+        font-size: 0.4rem;
+        transition: var(--transition);
+    }
+    .footer__socials i{
+        font-size: 0.6rem;
+    }
+  
+    .footer__copyright{
+        margin-bottom: 0.5rem;
+    }
+}
